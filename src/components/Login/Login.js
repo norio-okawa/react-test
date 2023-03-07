@@ -12,14 +12,15 @@ async function loginUser(credentials) {
     body: JSON.stringify(credentials)
   })
     .then(data => {
-      axios.get('https://paul.blueboxonline.com/api/v1/users/session', 
-          { 
-            headers: { 
-              'Content-Type': 'application/json',
-              "Access-Control-Allow-Origin": "https://react-test-pearl-five.vercel.app"
-            }, 
-            withCredentials: true 
-          }
+      axios.get('https://paul.blueboxonline.com/api/v1/users/session'
+      // , 
+      //     { 
+      //       headers: { 
+      //         'Content-Type': 'application/json',
+      //         "Access-Control-Allow-Origin": "https://react-test-pearl-five.vercel.app"
+      //       }, 
+      //       withCredentials: true 
+      //     }
         );
       return data.json()
     })
